@@ -62,7 +62,7 @@ function Join() {
         width: "auto",
       }}
     >
-      <div className="framer-1oe39p4" data-framer-name="CONTENT" id="body">
+      <div className="framer-1oe39p4" data-framer-name="CONTENT">
         <div className="framer-mlsokg">
           <div className="framer-mjxgg5" data-framer-name="Section">
             <div className="framer-en031i" data-framer-name="Blog">
