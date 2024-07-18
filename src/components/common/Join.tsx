@@ -88,6 +88,7 @@ function Join() {
                     }}
                   >
                     <canvas
+                      // ref={canvasRef}
                       width={1000}
                       style={{
                         width: "100%",
