@@ -40996,11 +40996,11 @@ NavigationContainer [data-framer-component-type=NavigationContainer]>*,
   flex: none;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 40px;
+  gap: 0px;
   height: min-content;
   justify-content: flex-start;
   overflow: hidden;
-  padding: 100px 40px;
+  padding: 0px 40px;
   position: relative;
   width: 100%
 }
@@ -41043,7 +41043,7 @@ NavigationContainer [data-framer-component-type=NavigationContainer]>*,
   justify-content: flex-start;
   max-width: 1200px;
   overflow: hidden;
-  padding: 100px 0 0;
+  padding: 0 0 0;
   position: relative;
   width: 100%
 }
@@ -41436,7 +41436,7 @@ NavigationContainer [data-framer-component-type=NavigationContainer]>*,
   left: 0;
   position: absolute;
   right: 0;
-  top: -138px
+  top: -80px
 }
 
 .framer-9L1qR .framer-ia9wqn {

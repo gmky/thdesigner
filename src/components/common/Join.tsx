@@ -1,64 +1,29 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import * as THREE from 'three';
 
 function Join() {
-  // const canvasRef = useRef<any>(null);
+  function Earth() {
+    const meshRef = useRef<THREE.Mesh>(null);
 
-  // useEffect(() => {
-  //   const canvas = canvasRef.current;
-  //   const ctx = canvas.getContext("2d");
+    useFrame(() => {
+      if (meshRef.current) {
+        meshRef.current.rotation.y += 0.01; // Rotate 0.01 radians per frame
+      }
+    });
 
-  //   // Set canvas size
-  //   canvas.width = 800;
-  //   canvas.height = 400;
-
-  //   // Draw the Earth globe with polka dots
-  //   drawEarthGlobe(ctx);
-  // }, []);
-
-  // const drawEarthGlobe = (ctx: any) => {
-  //   const earthImage = new Image();
-  //   earthImage.src =
-  //     "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"; // Earth image URL
-
-  //   earthImage.onload = () => {
-  //     ctx.drawImage(earthImage, 0, 0, 800, 400);
-
-  //     // Draw polka dots
-  //     const dotSize = 3;
-  //     const dotColor = "rgba(255, 0, 0, 0.8)";
-  //     const dotSpacing = 30;
-
-  //     for (let lat = -90; lat <= 90; lat += 15) {
-  //       for (let lon = -180; lon <= 180; lon += 15) {
-  //         const [x, y] = latLonToXY(lat, lon);
-  //         ctx.beginPath();
-  //         ctx.arc(x, y, dotSize, 0, 2 * Math.PI);
-  //         ctx.fillStyle = dotColor;
-  //         ctx.fill();
-  //       }
-  //     }
-  //   };
-  // };
-
-  // // Helper function to convert latitude and longitude to canvas coordinates
-  // const latLonToXY = (lat: any, lon: any) => {
-  //   const radius = 200; // Adjust this according to your globe size
-  //   const centerX = 400; // Adjust this according to your canvas size
-  //   const centerY = 200; // Adjust this according to your canvas size
-
-  //   const phi = ((90 - lat) * Math.PI) / 180;
-  //   const theta = ((180 - lon) * Math.PI) / 180;
-
-  //   const x = radius * Math.sin(phi) * Math.cos(theta) + centerX;
-  //   const y = radius * Math.cos(phi) + centerY;
-
-  //   return [x, y];
-  // };
+    return (
+      <mesh ref={meshRef}>
+        <sphereGeometry args={[3, 32, 32]} />
+        <meshStandardMaterial attach="material" map={new THREE.TextureLoader().load('/images/123.png')} />
+      </mesh>
+    );
+  }
   return (
     <div
       className="framer-9L1qR framer-PyGGP framer-tvBuf framer-zZPvB framer-1tpzw0m"
       style={{
-        minHeight: "100vh",
         width: "auto",
       }}
     >
@@ -87,18 +52,15 @@ function Join() {
                         "radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 70%)",
                     }}
                   >
-                    <canvas
-                      // ref={canvasRef}
-                      width={1000}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        contain: "size layout paint",
-                        cursor: "auto",
-                        userSelect: "none",
-                      }}
-                      height={1000}
-                    />
+                    <Canvas
+                      style={{ height: '100%', width: '100%' }}
+                      camera={{ position: [4, 4, 4], fov: 75, near: 0.1, far: 1000 }}
+                    >
+                      <ambientLight intensity={0.5} />
+                      <directionalLight position={[5, 5, 5]} intensity={1} />
+                      <Earth />
+                      <OrbitControls enableZoom={false} />
+                    </Canvas>
                   </div>
                 </div>
               </div>
