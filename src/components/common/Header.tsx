@@ -18,7 +18,7 @@ function Header() {
           <nav className="nav-v2-main" role="navigation" data-nav-v2-mobile>
             <div className="nav-v2-main__wrapper">
               <ul className="nav-v2-main__list">
-                <li className="nav-v2-main__item nav-v2-main__item--sub-nav">
+                {/* <li className="nav-v2-main__item nav-v2-main__item--sub-nav">
                   <a data-nav-event-clicked="Hire Designers" href="/hiring">
                     Find designers
                   </a>
@@ -63,12 +63,12 @@ function Header() {
                   <a data-nav-event-clicked="Go Pro" href="/pro">
                     Go Pro
                   </a>
-                </li>
-                <li className="nav-v2-main__item nav-v2-main__item--divided nav-v2-hide-medium-up">
+                </li> */}
+                {/* <li className="nav-v2-main__item nav-v2-main__item--divided nav-v2-hide-medium-up">
                   <a data-nav-event-clicked="Sign in" href="/session/new">
                     Log in
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>
@@ -95,7 +95,7 @@ function Header() {
               />
             </svg>
           </a>
-          <div
+          {/* <div
             className="nav-v2-dynamic nav-v2-dynamic--loaded"
             data-nav-v2-dynamic
           >
@@ -183,7 +183,7 @@ function Header() {
                 Sign up
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -1558,7 +1558,7 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-globe.gl@^2.32.5:
+globe.gl@^2.32, globe.gl@^2.32.5:
   version "2.32.5"
   resolved "https://registry.yarnpkg.com/globe.gl/-/globe.gl-2.32.5.tgz#6a10c739327b8b6a39d34ca79ec18e549d59da4d"
   integrity sha512-dOBPFQDMWGuxfDF/e60x5wbPr7giTFcq5Y1cwFAyqirlWm358xuvPbq9xKbdt8bbsd5y5zaXKv/aEetJh6J68w==
@@ -2002,7 +2002,7 @@ promise-worker-transferable@^1.0.4:
     is-promise "^2.1.0"
     lie "^3.0.2"
 
-prop-types@^15.6.0:
+prop-types@15, prop-types@^15.6.0:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2041,12 +2041,21 @@ react-dom@^18.3.1:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
+react-globe.gl@^2.27.2:
+  version "2.27.2"
+  resolved "https://registry.yarnpkg.com/react-globe.gl/-/react-globe.gl-2.27.2.tgz#6d257197c899c1c9f77d18bb8a7d1a548b2d5d29"
+  integrity sha512-DqYZ1n93U50WZBBOpw+q+bFjzG/msQzSnEZDUgyceTmzu1fDXg/Tjeua6VsIhLDLW1uYOGqIkKQz6wbjbA7AWQ==
+  dependencies:
+    globe.gl "^2.32"
+    prop-types "15"
+    react-kapsule "2"
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-kapsule@^2.4.0:
+react-kapsule@2, react-kapsule@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/react-kapsule/-/react-kapsule-2.4.0.tgz#50d296ed2872a6db89f2de176eebb1a4ce2cccb8"
   integrity sha512-w4Yv9CgWdj8kWGQEPNWFGJJ08dYEZHZpiaFR/DgZjCMBNqv9wus2Gy1qvHVJmJbzvAZbq6jdvFC+NYzEqAlNhQ==
