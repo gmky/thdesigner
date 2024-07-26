@@ -17,7 +17,7 @@ function App() {
         <UserList />
         <ProjectList />
         <Partner />
-        <Join />
+        {/* <Join /> */}
         <Footer />
       </body>
     </>
