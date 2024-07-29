@@ -22,7 +22,7 @@ function Footer() {
           </svg>
           <span className="accessibility-text">Back to home page</span>
         </a>
-        <ul className="footer-v2__links">
+        {/* <ul className="footer-v2__links">
           <li>
             <a className="footer-v2__link" href="/for-designers">
               For designers
@@ -63,7 +63,7 @@ function Footer() {
               Support
             </a>
           </li>
-        </ul>
+        </ul> */}
         <div className="footer-v2__social-links">
           <a
             href="http://twitter.com/dribbble"
@@ -148,7 +148,7 @@ function Footer() {
             <a href="/cookie-policy">Cookies</a>
           </li>
         </ul>
-        <ul className="footer-v2__lower-list">
+        {/* <ul className="footer-v2__lower-list">
           <li>
             <a href="/directories/jobs">Jobs</a>
           </li>
@@ -167,7 +167,7 @@ function Footer() {
           <li>
             <a href="/resources">Resources</a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

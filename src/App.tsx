@@ -8,6 +8,8 @@ import ProjectList from "./components/common/ProjectList";
 import Partner from "./components/common/Partner";
 import Footer from "./components/common/Footer";
 import Join from "./components/common/Join";
+import Step from "./components/common/Step";
+import Capacity from "./components/common/Capacity";
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
         <Header />
         <UserList />
         <ProjectList />
-        <Partner />
+        {/* <Partner /> */}
         {/* <Join /> */}
+        <Step />
+        <Capacity />
         <Footer />
       </body>
     </>
