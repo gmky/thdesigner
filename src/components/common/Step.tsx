@@ -3,22 +3,22 @@ import React from "react";
 function Step() {
   const data = [
     {
-      name: "Find your dream home",
+      name: "Gửi thông tin",
       desc: "Which home inspires you the most? An expansive villa with sweeping sea views? A modernist cabin nestled deep in the woods? Browse for your perfect home, or let us assist in your searc",
       img: "/images/public 3.avif",
     },
     {
-      name: "Find your dream home",
+      name: "THIẾT KẾ CONCEPT",
       img: "/images/public4.avif",
       desc: "Which home inspires you the most? An expansive villa with sweeping sea views? A modernist cabin nestled deep in the woods? Browse for your perfect home, or let us assist in your searc",
     },
     {
-      name: "Find your dream home",
+      name: "DIỄN HỌA PHỐI CẢNH 3D",
       img: "/images/public5.avif",
       desc: "Which home inspires you the most? An expansive villa with sweeping sea views? A modernist cabin nestled deep in the woods? Browse for your perfect home, or let us assist in your searc",
     },
     {
-      name: "Find your dream home",
+      name: "TRIỂN KHAI HỒ SƠ KỸ THUẬT",
       img: "/images/public.avif",
       desc: "Which home inspires you the most? An expansive villa with sweeping sea views? A modernist cabin nestled deep in the woods? Browse for your perfect home, or let us assist in your searc",
     },
@@ -30,9 +30,7 @@ function Step() {
         className="sc-af8ca28b-1 jeqrpA"
         style={{ opacity: 1, transform: "translate(0px, 0px)" }}
       >
-        <h2 className="sc-af8ca28b-2 ihAgmt">
-          Your buying journey, made simple
-        </h2>
+        <h2 className="sc-af8ca28b-2 ihAgmt">Quy trình làm việc</h2>
         <div className="sc-af8ca28b-3 hRMiZS">
           {data.map((item: any, index: any) => (
             <section

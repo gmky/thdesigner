@@ -24,7 +24,7 @@ function ProjectList() {
     <>
       <div className="home-feed">
         <h2 className="home-feed__heading home-container">
-          Explore inspiring designs
+          Khám phá những thiết kế đầy cảm hứng
         </h2>
         <ol className="js-thumbnail-grid shots-grid group dribbbles  container-fluid">
           {[...Array(12)].map((item: any, index: any) => (

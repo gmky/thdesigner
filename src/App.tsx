@@ -10,6 +10,8 @@ import Footer from "./components/common/Footer";
 import Join from "./components/common/Join";
 import Step from "./components/common/Step";
 import Capacity from "./components/common/Capacity";
+import Benifit from "./components/common/Benifit";
+import Contact from "./components/common/Contact";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         {/* <Join /> */}
         <Step />
         <Capacity />
+        <Benifit />
+        <Contact />
         <Footer />
       </body>
     </>

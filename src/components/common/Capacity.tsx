@@ -34,11 +34,11 @@ function Capacity() {
               style={{ opacity: 1, transform: "translate(0px, 0px)" }}
             >
               <p className="sc-ab508457-4 dlSabw">
-                3 Key Benefits of Owning with TH DESIGNER
+                3 năng lực cốt lõi của TH DESIGNER
               </p>
               <p className="sc-ab508457-5 erWabC">
-                Discover all the additional benefits that are included with
-                owning a TH DESIGNER
+                Khám phá tất cả các lợi ích bổ sung đi kèm với việc sở hữu TH
+                DESIGNER
               </p>
             </div>
             {/* <a href="/en/how-it-works" className="sc-ab508457-6 jfnexc">
@@ -66,7 +66,7 @@ function Capacity() {
                 />
               </svg>
               <div className="sc-ab508457-10 frPaJE">
-                <p className="sc-ab508457-11 dGzkQh">Flexible Ownership</p>
+                <p className="sc-ab508457-11 dGzkQh">Diễn họa 3D kiến trúc</p>
                 <p className="sc-ab508457-12 gGnGbF">
                   The ability to buy only as much as you need gives
                   unprecedented flexibility to buy and invest in one-of-a-kind,
@@ -94,7 +94,7 @@ function Capacity() {
                 />
               </svg>
               <div className="sc-ab508457-10 frPaJE">
-                <p className="sc-ab508457-11 dGzkQh">Flexible Ownership</p>
+                <p className="sc-ab508457-11 dGzkQh">Diễn họa 3D nội thất</p>
                 <p className="sc-ab508457-12 gGnGbF">
                   The ability to buy only as much as you need gives
                   unprecedented flexibility to buy and invest in one-of-a-kind,
@@ -122,7 +122,7 @@ function Capacity() {
                 />
               </svg>
               <div className="sc-ab508457-10 frPaJE">
-                <p className="sc-ab508457-11 dGzkQh">Flexible Ownership</p>
+                <p className="sc-ab508457-11 dGzkQh">Triển khai kỹ thuật 2D</p>
                 <p className="sc-ab508457-12 gGnGbF">
                   The ability to buy only as much as you need gives
                   unprecedented flexibility to buy and invest in one-of-a-kind,

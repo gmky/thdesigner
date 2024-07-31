@@ -77,10 +77,7 @@ function UserList() {
         <section className="hero">
           <div className="home-container">
             <div className="home-badge home-badge--color-cycle">
-              <a
-                data-track-cta="Get started"
-                href="/signup/new?return_to_after_signup=%2Fget-started"
-              >
+              <a data-track-cta="Get started">
                 Over 3 million ready-to-work creatives!
               </a>
             </div>
@@ -91,13 +88,6 @@ function UserList() {
               Get inspired by the work of millions of top-rated designers &amp;
               agencies around the world.
             </div>
-            <a
-              className="margin-t-32 btn2 btn2--large"
-              data-track-cta="Get started"
-              href="/signup/new?return_to_after_signup=%2Fget-started"
-            >
-              Get started
-            </a>
           </div>
           <div
             className="hero-marquee"
