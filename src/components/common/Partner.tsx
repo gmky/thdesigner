@@ -50,6 +50,7 @@ function Partner() {
                   <Slider {...settings}>
                     {[...Array(12)].map((item: any, index: any) => (
                       <div
+                        key={index}
                         style={{
                           width: "155px",
                           height: "40px",
@@ -69,7 +70,7 @@ function Partner() {
                             font-weight="bold"
                             fill="#000000"
                           >
-                            facebook
+                            {item?.x}
                           </text>
                         </svg>
                       </div>

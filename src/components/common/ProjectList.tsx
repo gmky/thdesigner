@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ModalProject from "./modal/ModalProject";
 
 function ProjectList() {
   const [open, setOpen] = useState(false);
-
+  const [items, setItems] = useState([]); // State để lưu trữ danh sách các phần tử
   useEffect(() => {
     if (open) {
       document.body.classList.add("noscroll");
@@ -17,6 +17,75 @@ function ProjectList() {
     };
   }, [open]); // Dependency array includes 'open'
 
+  useEffect(() => {
+    // Mô phỏng danh sách các mục trong carousel
+    const mockItems: any = [
+      {
+        name: "One Week Wonders",
+        title: "Creative Director",
+        tags: ["Illustration", "Mobile", "UI"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Brand Designer",
+        tags: ["Brand", "Illustration", "Web"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      {
+        name: "One Week Wonders",
+        title: "Lead Product Designer",
+        tags: ["Leadership", "Product", "UX"],
+      },
+      // Thêm các mục khác nếu cần
+    ];
+
+    setItems(mockItems); // Cập nhật danh sách các mục vào state
+  }, []);
+
   const handleCloseModal = () => {
     setOpen(false);
   };
@@ -27,8 +96,9 @@ function ProjectList() {
           Khám phá những thiết kế đầy cảm hứng
         </h2>
         <ol className="js-thumbnail-grid shots-grid group dribbbles  container-fluid">
-          {[...Array(12)].map((item: any, index: any) => (
+          {items?.map((item: any, index: number) => (
             <li
+              key={index}
               onClick={() => {
                 setOpen(true);
               }}
@@ -82,7 +152,7 @@ function ProjectList() {
                       data-src="https://cdn.dribbble.com/users/1667332/avatars/small/edd45777913e5de4434a1a1b812c76cf.png?1566878129"
                       src="https://cdn.dribbble.com/users/1667332/avatars/small/edd45777913e5de4434a1a1b812c76cf.png?1566878129"
                     />
-                    <span className="display-name">One Week Wonders</span>
+                    <span className="display-name">{item.name}</span>
                   </a>
                 </div>
               </div>

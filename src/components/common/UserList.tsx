@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function UserList() {
   const [items, setItems] = useState([]); // State để lưu trữ danh sách các phần tử
@@ -91,7 +91,7 @@ function UserList() {
           </div>
           <div
             className="hero-marquee"
-            style={{ "--card-count": items.length }}
+            style={{ "--card-count": items.length } as React.CSSProperties}
           >
             <div className="hero-marquee__track">
               <div className="hero-marquee__grid">
