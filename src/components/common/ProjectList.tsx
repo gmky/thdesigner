@@ -60,26 +60,6 @@ function ProjectList() {
         title: "Lead Product Designer",
         tags: ["Leadership", "Product", "UX"],
       },
-      {
-        name: "One Week Wonders",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "One Week Wonders",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "One Week Wonders",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "One Week Wonders",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
       // Thêm các mục khác nếu cần
     ];
 
@@ -164,7 +144,7 @@ function ProjectList() {
           className="home-feed__cta btn2 btn2--secondary btn2--large"
           href="/shots/popular"
         >
-          Browse more inspiration
+          Xem thêm các dự án
         </a>
       </div>
 

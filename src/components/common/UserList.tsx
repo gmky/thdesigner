@@ -78,16 +78,24 @@ function UserList() {
           <div className="home-container">
             <div className="home-badge home-badge--color-cycle">
               <a data-track-cta="Get started">
-                Over 3 million ready-to-work creatives!
+                Hơn 1.000 dự án đã triển khai và hoàn thành!
               </a>
             </div>
             <h1 className="hero__heading">
-              The world’s destination for design
+              Điểm đến của mọi người về thiết kế
             </h1>
             <div className="home-type-body-large font-weight-500">
-              Get inspired by the work of millions of top-rated designers &amp;
-              agencies around the world.
+              Lấy cảm hứng từ tác phẩm của hàng triệu nhà thiết kế và đại lý
+              được xếp hạng hàng đầu trên khắp thế giới.
             </div>
+            <a
+              className="margin-t-32 btn2 btn2--large"
+              href="https://zalo.me/0962918804"
+              rel="nofollow"
+              target="_blank"
+            >
+              NHẬN BẢNG GIÁ
+            </a>
           </div>
           <div
             className="hero-marquee"

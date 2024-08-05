@@ -6,7 +6,7 @@ function Contact() {
       <div className="contact-box-bottom">
         <a
           className="contact-box-wrapper nut-chat-facebook"
-          href="https://m.me/2024735194428983"
+          href="https://m.me/100741699581069"
           rel="nofollow"
           target="_blank"
         >
@@ -42,7 +42,7 @@ function Contact() {
         </a>
         <a
           className="contact-box-wrapper nut-chat-zalo"
-          href="https://zalo.me/0963590255"
+          href="https://zalo.me/0962918804"
           rel="nofollow"
           target="_blank"
         >
@@ -107,7 +107,7 @@ function Contact() {
             <FontAwesomeIcon icon={faPhoneAlt} />
           </div>
           <div className="contact-info">
-            <b>0963.590.255</b>
+            <b>0962.918.804</b>
             <span>(8h-24h)</span>
           </div>
         </a>

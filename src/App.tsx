@@ -5,8 +5,10 @@ import ProjectList from "./components/common/ProjectList";
 import Footer from "./components/common/Footer";
 import Step from "./components/common/Step";
 import Capacity from "./components/common/Capacity";
-import Benifit from "./components/common/Benifit";
+// import Benifit from "./components/common/Benifit";
 import Contact from "./components/common/Contact";
+import AboutUs from "./components/common/AboutUs";
+import OperatingModel from "./components/common/OperatingModel";
 
 function App() {
   return (
@@ -18,8 +20,10 @@ function App() {
         {/* <Partner /> */}
         <Step />
         <Capacity />
-        <Benifit />
+        {/* <Benifit /> */}
         <Contact />
+        <OperatingModel />
+        <AboutUs />
         <Footer />
       </body>
     </>

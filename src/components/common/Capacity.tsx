@@ -14,8 +14,9 @@ function Capacity() {
             <p className="sc-f96b1ebd-4 huYKyF">Take the next step</p>
             <p className="sc-f96b1ebd-5 iwtAYz">Make it yours</p>
             <p className="sc-f96b1ebd-6 BA-DxQ">
-              Your dream home awaits you. Book a call or get in touch to get all
-              the information and support you need to make it happen.
+              Ngôi nhà mơ ước của bạn đang chờ bạn. Đặt cuộc gọi hoặc liên hệ để
+              nhận được tất cả thông tin và sự hỗ trợ bạn cần để biến điều đó
+              thành hiện thực.
             </p>
           </div>
         </div>
@@ -32,11 +33,11 @@ function Capacity() {
               style={{ opacity: 1, transform: "translate(0px, 0px)" }}
             >
               <p className="sc-ab508457-4 dlSabw">
-                3 năng lực cốt lõi của TH DESIGNER
+                3 cam kết của của 10+ Archviz
               </p>
               <p className="sc-ab508457-5 erWabC">
-                Khám phá tất cả các lợi ích bổ sung đi kèm với việc sở hữu TH
-                DESIGNER
+                Khám phá tất cả các lợi ích bổ sung đi kèm với việc sở hữu 10+
+                Archviz
               </p>
             </div>
             {/* <a href="/en/how-it-works" className="sc-ab508457-6 jfnexc">
@@ -64,7 +65,7 @@ function Capacity() {
                 />
               </svg>
               <div className="sc-ab508457-10 frPaJE">
-                <p className="sc-ab508457-11 dGzkQh">Diễn họa 3D kiến trúc</p>
+                <p className="sc-ab508457-11 dGzkQh">Báo giá minh bạch</p>
                 <p className="sc-ab508457-12 gGnGbF">
                   The ability to buy only as much as you need gives
                   unprecedented flexibility to buy and invest in one-of-a-kind,
@@ -92,7 +93,7 @@ function Capacity() {
                 />
               </svg>
               <div className="sc-ab508457-10 frPaJE">
-                <p className="sc-ab508457-11 dGzkQh">Diễn họa 3D nội thất</p>
+                <p className="sc-ab508457-11 dGzkQh">Chuẩn tiến độ</p>
                 <p className="sc-ab508457-12 gGnGbF">
                   The ability to buy only as much as you need gives
                   unprecedented flexibility to buy and invest in one-of-a-kind,
@@ -120,7 +121,7 @@ function Capacity() {
                 />
               </svg>
               <div className="sc-ab508457-10 frPaJE">
-                <p className="sc-ab508457-11 dGzkQh">Triển khai kỹ thuật 2D</p>
+                <p className="sc-ab508457-11 dGzkQh">Cam kết chất lượng</p>
                 <p className="sc-ab508457-12 gGnGbF">
                   The ability to buy only as much as you need gives
                   unprecedented flexibility to buy and invest in one-of-a-kind,
