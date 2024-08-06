@@ -129,29 +129,15 @@ function Footer() {
         <ul className="footer-v2__lower-list">
           <li>© 2024 10+ Archviz</li>
           <li>
-            <a>Trần Phú Hà Đông, Hà Nội, Việt Nam / 0962.918.804</a>
+            <a>Địa chỉ: Trần Phú Hà Đông, Hà Nội, Việt Nam</a>
+          </li>
+          <li>
+            <a>Liên hệ: 0962.918.804</a>
+          </li>
+          <li>
+            <a>Gmail: 10plus.archviz@gmail.com</a>
           </li>
         </ul>
-        {/* <ul className="footer-v2__lower-list">
-          <li>
-            <a href="/directories/jobs">Jobs</a>
-          </li>
-          <li>
-            <a href="/directories/designers">Designers</a>
-          </li>
-          <li>
-            <a href="/directories/freelance-designers">Freelancers</a>
-          </li>
-          <li>
-            <a href="/tags">Tags</a>
-          </li>
-          <li>
-            <a href="/places">Places</a>
-          </li>
-          <li>
-            <a href="/resources">Resources</a>
-          </li>
-        </ul> */}
       </div>
     </div>
   );
