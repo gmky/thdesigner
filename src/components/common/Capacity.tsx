@@ -14,9 +14,9 @@ function Capacity() {
             <p className="sc-f96b1ebd-4 huYKyF">Take the next step</p>
             <p className="sc-f96b1ebd-5 iwtAYz">Make it yours</p>
             <p className="sc-f96b1ebd-6 BA-DxQ">
-              Ngôi nhà mơ ước của bạn đang chờ bạn. Đặt cuộc gọi hoặc liên hệ để
-              nhận được tất cả thông tin và sự hỗ trợ bạn cần để biến điều đó
-              thành hiện thực.
+              Một đơn vị thiết kế chuyên nghiệp đang chờ bạn. Đặt cuộc gọi hoặc
+              liên hệ để nhận được tất cả thông tin và sự hỗ trợ bạn cần để biến
+              điều đó thành hiện thực.
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ function Capacity() {
                 3 cam kết của của 10+ Archviz
               </p>
               <p className="sc-ab508457-5 erWabC">
-                Khám phá tất cả các lợi ích bổ sung đi kèm với việc sở hữu 10+
+                Khám phá tất cả các lợi ích bổ sung đi kèm với việc hợp tác 10+
                 Archviz
               </p>
             </div>

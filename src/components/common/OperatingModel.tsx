@@ -37,7 +37,7 @@ function OperatingModel() {
           /> */}
           <div className="o-video">
             <video
-              src="https://framerusercontent.com/assets/5wqD1wQAkbwXTgzYdN6Lr7kqfpg.mp4"
+              src="https://r2.gmky.dev/Video.mp4"
               loop={true}
               autoPlay={true}
               muted={true}

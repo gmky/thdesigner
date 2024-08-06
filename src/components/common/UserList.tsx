@@ -85,8 +85,8 @@ function UserList() {
               Điểm đến của mọi người về thiết kế
             </h1>
             <div className="home-type-body-large font-weight-500">
-              Lấy cảm hứng từ tác phẩm của hàng triệu nhà thiết kế và đại lý
-              được xếp hạng hàng đầu trên khắp thế giới.
+              Một trong những đơn vị đầu tiên đi đầu về phòng thiết kế thuê
+              ngoài.
             </div>
             <a
               className="margin-t-32 btn2 btn2--large"

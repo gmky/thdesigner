@@ -1,6 +1,30 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 function Contact() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show button when page is scrolled down
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Scroll the page to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // smooth scroll
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
   return (
     <>
       <div className="contact-box-bottom">
@@ -111,6 +135,25 @@ function Contact() {
             <span>(8h-24h)</span>
           </div>
         </a>
+        {isVisible && (
+          <a
+            onClick={scrollToTop}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              cursor: "pointer",
+            }}
+          >
+            <img
+              width="50"
+              height="50"
+              className="lazyloading-hidden lazyloaded"
+              data-src="https://cdn.dribbble.com/assets/icon-backtotop-v2-9f3ef55e9788120b9b7764af9e386b31599c413703860e124c692db30efad7f2.png"
+              alt="Back to top"
+              src="https://cdn.dribbble.com/assets/icon-backtotop-v2-9f3ef55e9788120b9b7764af9e386b31599c413703860e124c692db30efad7f2.png"
+            />
+          </a>
+        )}
       </div>
     </>
   );

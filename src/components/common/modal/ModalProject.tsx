@@ -116,7 +116,7 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                         }}
                       >
                         <a className="img-th" target="_blank">
-                          <img
+                          {/* <img
                             style={{
                               width: "100%",
                               height: "100%",
@@ -126,6 +126,24 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                             alt=""
                             className="v-img content-block border-radius-8"
                             srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery1.jpg/public"
+                          /> */}
+
+                          <iframe
+                            src="https://kuula.co/share/collection/7cczq"
+                            // allowFullScreen
+                            // loop={true}
+                            // autoPlay={true}
+                            // muted={true}
+                            // playsInline={true}
+                            // className="fjRubF-video"
+                            style={{
+                              borderRadius: 8,
+                              display: "block",
+                              objectFit: "cover",
+                              width: "100%",
+                              objectPosition: "50% 50%",
+                              height: "100%",
+                            }}
                           />
                         </a>
                       </div>

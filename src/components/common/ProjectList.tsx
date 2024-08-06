@@ -3,22 +3,19 @@ import ModalProject from "./modal/ModalProject";
 
 function ProjectList() {
   const [open, setOpen] = useState(false);
-  const [items, setItems] = useState([]); // State để lưu trữ danh sách các phần tử
+  const [items, setItems] = useState([]);
   useEffect(() => {
     if (open) {
       document.body.classList.add("noscroll");
     } else {
       document.body.classList.remove("noscroll");
     }
-
-    // Optional: Cleanup function to remove the class when the component unmounts
     return () => {
       document.body.classList.remove("noscroll");
     };
-  }, [open]); // Dependency array includes 'open'
+  }, [open]);
 
   useEffect(() => {
-    // Mô phỏng danh sách các mục trong carousel
     const mockItems: any = [
       {
         name: "One Week Wonders",
@@ -60,10 +57,9 @@ function ProjectList() {
         title: "Lead Product Designer",
         tags: ["Leadership", "Product", "UX"],
       },
-      // Thêm các mục khác nếu cần
     ];
 
-    setItems(mockItems); // Cập nhật danh sách các mục vào state
+    setItems(mockItems);
   }, []);
 
   const handleCloseModal = () => {
@@ -82,15 +78,7 @@ function ProjectList() {
               onClick={() => {
                 setOpen(true);
               }}
-              id="screenshot-24499910"
-              data-thumbnail-id={24499910}
-              className="shot-thumbnail js-thumbnail shot-thumbnail-container    "
-              data-ad-data
-              data-boost-id
-              data-is-boost-fallback
-              data-request-source
-              data-track-location="Shot"
-              data-search-uuid="58bb152d-049f-416b-be2b-5a47af2edb51"
+              className="shot-thumbnail js-thumbnail shot-thumbnail-container"
             >
               <div className="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble  ">
                 <figure className="js-thumbnail-placeholder shot-thumbnail-placeholder">
@@ -104,8 +92,6 @@ function ProjectList() {
                   </noscript>
                   <img
                     alt="City Adventure andres lozano buildings character city digital drawn folioart illustration line search find urban wheres wally"
-                    data-srcset="https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=320x240&amp;vertical=center 320w, https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=400x300&amp;vertical=center 400w, https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=450x338&amp;vertical=center 450w, https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=640x480&amp;vertical=center 640w, https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=700x525&amp;vertical=center 700w, https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=800x600&amp;vertical=center 800w, https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=840x630&amp;vertical=center 840w, https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=1000x750&amp;vertical=center 1000w, https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=1200x900&amp;vertical=center 1200w"
-                    data-src="https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=400x300&amp;vertical=center"
                     data-sizes="auto"
                     className="lazyautosizes ls-is-cached lazyloaded"
                     src="https://cdn.dribbble.com/userupload/15547574/file/original-b1b3c7b745648abb3bbb808373318b0b.jpg?crop=0x220-1404x1273&amp;resize=400x300&amp;vertical=center"
@@ -122,7 +108,7 @@ function ProjectList() {
                 </div>
               </div>
               <div className="shot-details-container js-shot-details-container">
-                <div className="user-information" data-uuid-passthrough>
+                <div className="user-information">
                   <a className="hoverable url" rel="contact">
                     <img
                       className="photo ls-is-cached lazyloaded"
