@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import ModalProject from "../common/modal/ModalProject";
+import { ApiClient } from "../../api";
 
 function ProjectList() {
   const [open, setOpen] = useState(false);
   const [items, setItems] = useState([]);
 
   
+  // test connect api
   const getItem = () => {
+    new ApiClient({BASE: 'https://th-design-strapi.onrender.com/api'}).product.getProducts().then(res => {
+      console.log({res});
+    })
   }
 
   useEffect(() => {
