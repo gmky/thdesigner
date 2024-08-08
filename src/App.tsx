@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/common/Header";
-import UserList from "./components/common/UserList";
-import ProjectList from "./components/common/ProjectList";
+import UserList from "./components/users/UserList";
+import ProjectList from "./components/projects/ProjectList";
 import Footer from "./components/common/Footer";
 import Step from "./components/common/Step";
 import Capacity from "./components/common/Capacity";

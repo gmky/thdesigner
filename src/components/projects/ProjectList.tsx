@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
-import ModalProject from "./modal/ModalProject";
+import ModalProject from "../common/modal/ModalProject";
 
 function ProjectList() {
   const [open, setOpen] = useState(false);
   const [items, setItems] = useState([]);
+
+  
+  const getItem = () => {
+  }
+
   useEffect(() => {
+    getItem();
+
     if (open) {
       document.body.classList.add("noscroll");
     } else {
