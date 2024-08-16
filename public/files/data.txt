@@ -1,0 +1,34 @@
+họ va tên:
+
+Trần Văn Tú
+Lê Thị Thuận
+Phạm Minh Đức
+Huỳnh Thanh Hà
+Võ Quang Huy
+Phan Thị Ngọc
+Trương Minh Tuấn
+Bùi Thị Lan
+Đặng Văn Anh
+Đỗ Thị Mai
+Ngô Đình Quân
+Hồ Thị Thảo
+Dương Minh Khánh
+Đinh Văn Hùng
+Đoàn Thị Hương
+Lâm Quốc Trung
+Mai Thị Hồng
+Trịnh Thị Thu
+Đào Minh Quang
+
+// vị trí
+
+Kiến trúc sư nội thất (Interior Architect): Đây là người chịu trách nhiệm thiết kế và lập kế hoạch cho không gian nội thất, bao gồm bố trí, vật liệu, màu sắc, ánh sáng và các yếu tố khác.
+Chuyên viên thiết kế nội thất (Interior Designer): Người tạo ra các bản vẽ chi tiết, lựa chọn vật liệu, đồ nội thất và thực hiện thiết kế theo yêu cầu của khách hàng.
+Chuyên viên trang trí nội thất (Interior Decorator): Tập trung vào việc chọn lựa màu sắc, vật trang trí, đồ nội thất và tạo ra không gian thẩm mỹ.
+Chuyên viên kỹ thuật nội thất (Interior Technician): Đảm nhiệm việc thực hiện kế hoạch thiết kế, lắp đặt và xây dựng nội thất.
+Chuyên viên chiếu sáng nội thất (Interior Lighting Specialist): Tập trung vào việc thiết kế hệ thống chiếu sáng phù hợp với không gian nội thất.
+Chuyên viên vật liệu nội thất (Interior Materials Specialist): Tìm hiểu và lựa chọn các vật liệu phù hợp cho không gian nội thất, bao gồm sàn, tường, trần, và các bề mặt khác.
+Chuyên viên phân tích không gian (Space Planner): Tối ưu hóa không gian bằng cách bố trí đồ nội thất, tạo ra sự hài hòa giữa chức năng và thẩm mỹ.
+Chuyên viên phối màu nội thất (Color Consultant): Tư vấn về việc chọn màu sắc phù hợp cho không gian, tạo ra sự cân đối và hài hòa.
+Chuyên viên phong cách nội thất (Interior Stylist): Tạo ra các phong cách thiết kế độc đáo và thú vị, thể hiện cá tính của khách hàng.
+Chuyên viên thiết kế nội thất thương mại (Commercial Interior Designer): Tập trung vào thiết kế không gian nội thất cho các doanh nghiệp, cửa hàng, nhà hàng, khách sạn và văn phòng.

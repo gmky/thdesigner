@@ -1,21 +1,24 @@
 import { useEffect, useState } from "react";
 import ModalProject from "../common/modal/ModalProject";
-import { ApiClient } from "../../api";
+import axios from "axios";
 
 function ProjectList() {
   const [open, setOpen] = useState(false);
-  const [items, setItems] = useState([]);
+  const [dataProducts, setDataProducts] = useState([]);
 
   
   // test connect api
-  const getItem = () => {
-    new ApiClient({BASE: 'https://th-design-strapi.onrender.com/api'}).product.getProducts().then(res => {
+  const getProducts = () => {
+    axios.get('files/products.json').then(res => {
       console.log({res});
     })
   }
 
   useEffect(() => {
-    getItem();
+    getProducts();
+  }, [])
+
+  useEffect(() => {
 
     if (open) {
       document.body.classList.add("noscroll");
@@ -71,7 +74,7 @@ function ProjectList() {
       },
     ];
 
-    setItems(mockItems);
+    setDataProducts(mockItems);
   }, []);
 
   const handleCloseModal = () => {
@@ -84,7 +87,7 @@ function ProjectList() {
           Khám phá những thiết kế đầy cảm hứng
         </h2>
         <ol className="js-thumbnail-grid shots-grid group dribbbles  container-fluid">
-          {items?.map((item: any, index: number) => (
+          {dataProducts?.map((item: any, index: number) => (
             <li
               key={index}
               onClick={() => {

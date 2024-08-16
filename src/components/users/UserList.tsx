@@ -1,75 +1,17 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 function UserList() {
   const [items, setItems] = useState([]); // State để lưu trữ danh sách các phần tử
 
-  useEffect(() => {
-    // Mô phỏng danh sách các mục trong carousel
-    const mockItems: any = [
-      {
-        name: "Chris Owens",
-        title: "Creative Director",
-        tags: ["Illustration", "Mobile", "UI"],
-      },
-      {
-        name: "Elif Kameşoğlu",
-        title: "Brand Designer",
-        tags: ["Brand", "Illustration", "Web"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      {
-        name: "Helen Tran",
-        title: "Lead Product Designer",
-        tags: ["Leadership", "Product", "UX"],
-      },
-      // Thêm các mục khác nếu cần
-    ];
+  const getDataUsers = () => {
+    axios.get("files/users.json").then((res) => {
+      setItems(res.data);
+    });
+  };
 
-    setItems(mockItems); // Cập nhật danh sách các mục vào state
+  useEffect(() => {
+    getDataUsers();
   }, []);
   return (
     <>
@@ -116,9 +58,9 @@ function UserList() {
                         {item.title}
                       </div>
                       <ul className="hero-marquee-item__tags">
-                        <li className="hero-marquee-item__tag">Brand</li>
-                        <li className="hero-marquee-item__tag">Illustration</li>
-                        <li className="hero-marquee-item__tag">Web</li>
+                        {item.tags.map((tag: string) => (
+                          <li className="hero-marquee-item__tag">{tag}</li>
+                        ))}
                       </ul>
                     </div>
                     <div className="hero-marquee-item__media">
@@ -130,9 +72,9 @@ function UserList() {
                         className="lazypreload lazyautosizes lazyloaded"
                         data-sizes="auto"
                         data-aspectratio="0.8029411764705883"
-                        data-srcset="https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=320x399&vertical=center 320w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=400x498&vertical=center 400w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=640x797&vertical=center 640w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=752x937&vertical=center 752w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=1024x1275&vertical=center 1024w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=1200x1495&vertical=center 1200w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=1504x1873&vertical=center 1504w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=2048x2551&vertical=center 2048w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=273x340&vertical=center 273w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=546x680&vertical=center 546w"
+                        data-srcset={item.avatar} 
                         sizes="273px"
-                        srcSet="https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=320x399&vertical=center 320w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=400x498&vertical=center 400w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=640x797&vertical=center 640w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=752x937&vertical=center 752w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=1024x1275&vertical=center 1024w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=1200x1495&vertical=center 1200w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=1504x1873&vertical=center 1504w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=2048x2551&vertical=center 2048w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=273x340&vertical=center 273w, https://cdn.dribbble.com/uploads/47174/original/4f02d72fe701b15b2168a4954332427f.png?1685645150&format=webp&resize=546x680&vertical=center 546w"
+                        srcSet={item.avatar} 
                       />
                     </div>
                   </div>

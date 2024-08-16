@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title": "",
+        "gallery": [
+            {
+                "row": 1,
+                "url": ""
+            }
+        ],
+        "tags": ["", ""],
+        "linkPreview": "",
+        "content": "",
+        "description": "",
+        "thumbnail": "",
+        "author": [
+            {
+                "fullName": "",
+                "email": "",
+                "avatar": ""
+            }
+        ]
+    }
+]
