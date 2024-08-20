@@ -44,6 +44,7 @@ function Step() {
         <div className="sc-af8ca28b-3 hRMiZS">
           {data.map((item: any, index: any) => (
             <section
+              key={index}
               data-scroll="normal"
               className="sc-af8ca28b-4 kfeuou"
               style={{ opacity: 1, transform: "translate(0px, 0px)" }}

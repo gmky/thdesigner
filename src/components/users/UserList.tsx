@@ -59,7 +59,7 @@ function UserList() {
                       </div>
                       <ul className="hero-marquee-item__tags">
                         {item.tags.map((tag: string) => (
-                          <li className="hero-marquee-item__tag">{tag}</li>
+                          <li key={tag} className="hero-marquee-item__tag">{tag}</li>
                         ))}
                       </ul>
                     </div>
