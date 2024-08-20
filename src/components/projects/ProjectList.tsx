@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ModalProject from "../common/modal/ModalProject";
-import axios from "axios";
+import { ApiClient } from "../../api";
 
 function ProjectList() {
   const [open, setOpen] = useState(false);
@@ -9,7 +9,7 @@ function ProjectList() {
   
   // test connect api
   const getProducts = () => {
-    axios.get('files/products.json').then(res => {
+    new ApiClient().product.getProducts().then(res => {
       console.log({res});
     })
   }
