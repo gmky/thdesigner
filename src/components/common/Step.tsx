@@ -15,11 +15,17 @@ function Step() {
       img: "/images/step_3.jpg",
       desc: "10+ triển khai render xuất ảnh tĩnh hoặc 360 ( nếu khách hàng yêu đăng ký gói 360 ) và khách hàng hoàn thành 50% số thiền còn lại theo khối lượng triển khai.",
     },
+    // {
+    //   name: "TRIỂN KHAI HỒ SƠ KỸ THUẬT",
+    //   img: "/images/step_4.jpg",
+    //   desc: `10+ triển khai hồ sơ kỹ thuật thi công theo yêu cầu của khách hàng. <br/>
+    //          <strong>Lưu ý: 10+ hỗ trợ khách hàng chỉnh sửa để hoàn thiện bản thiết kế, nếu khối lượng chỉnh sửa quá 70% thì 2 bên sẽ thỏa thuận để tính thêm chi phí phát sinh.</strong>`,
+    // },
+
     {
       name: "TRIỂN KHAI HỒ SƠ KỸ THUẬT",
       img: "/images/step_4.jpg",
-      desc: `10+ triển khai hồ sơ kỹ thuật thi công theo yêu cầu của khách hàng. <br/> 
-             <strong>Lưu ý: 10+ hỗ trợ khách hàng chỉnh sửa để hoàn thiện bản thiết kế, nếu khối lượng chỉnh sửa quá 70% thì 2 bên sẽ thỏa thuận để tính thêm chi phí phát sinh.</strong>`,
+      desc: "10+ triển khai hồ sơ kỹ thuật thi công theo yêu cầu của khách hàng.",
     },
     // {
     //   name: "TRIỂN KHAI HỒ SƠ KỸ THUẬT",

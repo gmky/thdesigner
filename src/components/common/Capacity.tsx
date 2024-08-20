@@ -67,9 +67,10 @@ function Capacity() {
               <div className="sc-ab508457-10 frPaJE">
                 <p className="sc-ab508457-11 dGzkQh">Báo giá minh bạch</p>
                 <p className="sc-ab508457-12 gGnGbF">
-                  The ability to buy only as much as you need gives
-                  unprecedented flexibility to buy and invest in one-of-a-kind,
-                  masterpiece homes.
+                  Chúng tôi cam kết cung cấp báo giá chi tiết và minh bạch, giúp
+                  khách hàng nắm rõ mọi chi phí trước khi tiến hành bất kỳ dự án
+                  nào. Không có chi phí ẩn, mọi khoản mục đều được thể hiện rõ
+                  ràng và cụ thể.
                 </p>
               </div>
             </div>
@@ -95,9 +96,10 @@ function Capacity() {
               <div className="sc-ab508457-10 frPaJE">
                 <p className="sc-ab508457-11 dGzkQh">Chuẩn tiến độ</p>
                 <p className="sc-ab508457-12 gGnGbF">
-                  The ability to buy only as much as you need gives
-                  unprecedented flexibility to buy and invest in one-of-a-kind,
-                  masterpiece homes.
+                  Thời gian là yếu tố quan trọng trong mọi dự án. Chúng tôi cam
+                  kết tuân thủ nghiêm ngặt tiến độ đã thỏa thuận, đảm bảo hoàn
+                  thành công việc đúng hạn và đáp ứng đầy đủ yêu cầu của khách
+                  hàng.
                 </p>
               </div>
             </div>
@@ -123,9 +125,10 @@ function Capacity() {
               <div className="sc-ab508457-10 frPaJE">
                 <p className="sc-ab508457-11 dGzkQh">Cam kết chất lượng</p>
                 <p className="sc-ab508457-12 gGnGbF">
-                  The ability to buy only as much as you need gives
-                  unprecedented flexibility to buy and invest in one-of-a-kind,
-                  masterpiece homes.
+                  Chất lượng là tiêu chí hàng đầu của chúng tôi. Tất cả các dự
+                  án đều được thực hiện với sự tỉ mỉ và chú trọng đến từng chi
+                  tiết, đảm bảo sản phẩm cuối cùng đạt tiêu chuẩn cao nhất và
+                  mang lại sự hài lòng tối đa cho khách hàng.
                 </p>
               </div>
             </div>

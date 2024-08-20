@@ -43984,7 +43984,7 @@ NavigationContainer [data-framer-component-type=NavigationContainer]>*,
 .icIqTE {
   width: 100%;
   max-width: 352px;
-  aspect-ratio: 352 / 304;
+  /* aspect-ratio: 352 / 304; */
   object-fit: cover;
   border-radius: 4px;
 }
