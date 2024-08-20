@@ -2,9 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Gallery } from './Gallery';
-export type GalleryListResponseDataItem = {
-    id?: number;
-    attributes?: Gallery;
+export type LoginRequest = {
+    email: string;
+    password: string;
 };
 

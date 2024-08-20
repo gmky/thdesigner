@@ -2,9 +2,9 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Product } from './Product';
-export type ProductResponseDataObject = {
-    id?: number;
-    attributes?: Product;
+export type CreateAuthorRequest = {
+    name: string;
+    email: string;
+    avatar?: Blob;
 };
 

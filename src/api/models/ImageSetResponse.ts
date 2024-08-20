@@ -2,9 +2,9 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Product } from './Product';
-export type ProductListResponseDataItem = {
+import type { ImageDto } from './ImageDto';
+export type ImageSetResponse = {
     id?: number;
-    attributes?: Product;
+    images?: Array<ImageDto>;
 };
 

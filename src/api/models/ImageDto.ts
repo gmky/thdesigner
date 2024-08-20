@@ -2,9 +2,9 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Gallery } from './Gallery';
-export type GalleryResponseDataObject = {
+export type ImageDto = {
     id?: number;
-    attributes?: Gallery;
+    path?: string;
+    name?: string;
 };
 

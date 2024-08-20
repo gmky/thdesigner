@@ -5,22 +5,22 @@
 import type { BaseHttpRequest } from './core/BaseHttpRequest';
 import type { OpenAPIConfig } from './core/OpenAPI';
 import { AxiosHttpRequest } from './core/AxiosHttpRequest';
-import { GalleryService } from './services/GalleryService';
+import { AuthenticationService } from './services/AuthenticationService';
+import { AuthorService } from './services/AuthorService';
+import { ImageSetService } from './services/ImageSetService';
 import { ProductService } from './services/ProductService';
-import { UploadFileService } from './services/UploadFileService';
-import { UsersPermissionsAuthService } from './services/UsersPermissionsAuthService';
-import { UsersPermissionsUsersRolesService } from './services/UsersPermissionsUsersRolesService';
+import { UserService } from './services/UserService';
 type HttpRequestConstructor = new (config: OpenAPIConfig) => BaseHttpRequest;
 export class ApiClient {
-    public readonly gallery: GalleryService;
+    public readonly authentication: AuthenticationService;
+    public readonly author: AuthorService;
+    public readonly imageSet: ImageSetService;
     public readonly product: ProductService;
-    public readonly uploadFile: UploadFileService;
-    public readonly usersPermissionsAuth: UsersPermissionsAuthService;
-    public readonly usersPermissionsUsersRoles: UsersPermissionsUsersRolesService;
+    public readonly user: UserService;
     public readonly request: BaseHttpRequest;
     constructor(config?: Partial<OpenAPIConfig>, HttpRequest: HttpRequestConstructor = AxiosHttpRequest) {
         this.request = new HttpRequest({
-            BASE: config?.BASE ?? 'http://localhost:1337/api',
+            BASE: config?.BASE ?? 'https://virtserver.swaggerhub.com/lios/THDesign/1.0.0',
             VERSION: config?.VERSION ?? '1.0.0',
             WITH_CREDENTIALS: config?.WITH_CREDENTIALS ?? false,
             CREDENTIALS: config?.CREDENTIALS ?? 'include',
@@ -30,11 +30,11 @@ export class ApiClient {
             HEADERS: config?.HEADERS,
             ENCODE_PATH: config?.ENCODE_PATH,
         });
-        this.gallery = new GalleryService(this.request);
+        this.authentication = new AuthenticationService(this.request);
+        this.author = new AuthorService(this.request);
+        this.imageSet = new ImageSetService(this.request);
         this.product = new ProductService(this.request);
-        this.uploadFile = new UploadFileService(this.request);
-        this.usersPermissionsAuth = new UsersPermissionsAuthService(this.request);
-        this.usersPermissionsUsersRoles = new UsersPermissionsUsersRolesService(this.request);
+        this.user = new UserService(this.request);
     }
 }
 

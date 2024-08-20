@@ -2,12 +2,9 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type Users_Permissions_Role = {
-    id?: number;
+export type AuthorDto = {
     name?: string;
-    description?: string;
-    type?: string;
-    createdAt?: string;
-    updatedAt?: string;
+    email?: string;
+    avatar?: string;
 };
 
