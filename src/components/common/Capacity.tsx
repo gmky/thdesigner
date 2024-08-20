@@ -40,9 +40,6 @@ function Capacity() {
                 Archviz
               </p>
             </div>
-            {/* <a href="/en/how-it-works" className="sc-ab508457-6 jfnexc">
-              <p className="sc-ab508457-7 gtHTvV">Learn more</p>
-            </a> */}
           </div>
           <div className="sc-ab508457-8 fYDUfK">
             <div
