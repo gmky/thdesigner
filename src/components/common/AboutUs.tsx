@@ -24,7 +24,7 @@ function AboutUs() {
             <img
               className="sc-b9b9b8e5-5 eFjphg use-pc"
               data-scroll="background-pc"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              src="/images/background-mv_pc.jpg"
             />
           </picture>
           <picture>
@@ -40,7 +40,7 @@ function AboutUs() {
             <img
               className="sc-b9b9b8e5-5 eFjphg use-sp"
               data-scroll="background-sp"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              src="/images/background-mv_pc.jpg"
             />
           </picture>
         </div>
