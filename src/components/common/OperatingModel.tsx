@@ -9,7 +9,7 @@ function OperatingModel() {
           style={{ opacity: 1, transform: "translate(0px, 0px)" }}
         >
           <img
-            src="/images/features-2.jpg"
+            src="/images/3d.jpg"
             loading="lazy"
             className="sc-2251413b-2 fjRubF"
           />
@@ -26,16 +26,11 @@ function OperatingModel() {
             </p>
           </div>
         </section>
-        <section
+        {/* <section
           data-scroll="normal"
           className="sc-2251413b-1 gYPWPE"
           style={{ opacity: 1, transform: "translate(0px, 0px)" }}
         >
-          {/* <img
-            src="/images/features-2.jpg"
-            loading="lazy"
-            className="sc-2251413b-2 fjRubF"
-          /> */}
           <div className="o-video">
             <video
               src="https://r2.gmky.dev/Video.mp4"
@@ -67,6 +62,29 @@ function OperatingModel() {
               phong cách và nhu cầu của bạn.
             </p>
           </div>
+        </section> */}
+        <section
+          data-scroll="normal"
+          className="sc-2251413b-1 gYPWPE"
+          style={{ opacity: 1, transform: "translate(0px, 0px)" }}
+        >
+          <img
+            src="/images/3d.jpg"
+            loading="lazy"
+            className="sc-2251413b-2 fjRubF"
+          />
+          <div>
+            <h3 className="sc-2251413b-3 fTIImM">DIỄN HỌA 3D NỘI THẤT</h3>
+            <p className="sc-2251413b-4 fFhZYb">
+              Diễn Họa 3D Nội Thất mang đến cái nhìn chân thực và sinh động về
+              không gian sống và làm việc của bạn. Chúng tôi sử dụng công nghệ
+              3D tiên tiến để tái hiện chi tiết từng góc cạnh của nội thất, từ
+              màu sắc, chất liệu cho đến ánh sáng và bố cục. Dịch vụ này giúp
+              bạn dễ dàng trải nghiệm và điều chỉnh thiết kế nội thất theo ý
+              muốn trước khi thực hiện, đảm bảo mỗi chi tiết đều phù hợp với
+              phong cách và nhu cầu của bạn.
+            </p>
+          </div>
         </section>
         <section
           data-scroll="normal"
@@ -74,7 +92,7 @@ function OperatingModel() {
           style={{ opacity: 1, transform: "translate(0px, 0px)" }}
         >
           <img
-            src="/images/features-2.jpg"
+            src="/images/2d.jpg"
             loading="lazy"
             className="sc-2251413b-2 fjRubF"
           />
