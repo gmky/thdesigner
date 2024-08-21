@@ -34,9 +34,8 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
         </div>
       </div>
       <div
-        className={`shot-overlay js-shot-overlay lazyloading-hidden-container lazyloaded ${
-          isOpen === true ? "overlay-visible" : "overlay-hide"
-        }`}
+        className={`shot-overlay js-shot-overlay lazyloading-hidden-container lazyloaded ${isOpen === true ? "overlay-visible" : "overlay-hide"
+          }`}
       >
         <div className="overlay-content js-overlay-content">
           <div className="shot-container js-shot-container lazyload-hidden-element">
@@ -96,38 +95,40 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                   </div>
                 </div>
                 <div id="ssr-app" className="shot-page-container">
-                  <div className="content-block-container full-width">
-                    <div
-                      className="block-media-wrapper content-block"
-                      style={{ aspectRatio: "1.3333333333333333" }}
-                    >
+                  {data?.external_link && (
+                    <div className="content-block-container full-width">
                       <div
-                        className="block-media contain auto-width false"
-                        style={{
-                          aspectRatio: "1.33333 / 1",
-                          objectFit: "contain",
-                        }}
+                        className="block-media-wrapper content-block"
+                        style={{ aspectRatio: "1.3333333333333333" }}
                       >
-                        <a className="img-th" target="_blank">
-                          {/* src="https://kuula.co/share/collection/7cczq" */}
-                          <iframe
-                            src="https://kuula.co/share/collection/7cczq"
-                            style={{
-                              borderRadius: 8,
-                              display: "block",
-                              objectFit: "cover",
-                              width: "100%",
-                              objectPosition: "50% 50%",
-                              height: "100%",
-                            }}
-                          />
-                        </a>
-                      </div>
-                    </div>{" "}
-                  </div>
+                        <div
+                          className="block-media contain auto-width false"
+                          style={{
+                            aspectRatio: "1.33333 / 1",
+                            objectFit: "contain",
+                          }}
+                        >
+                          <a className="img-th" target="_blank">
+                            {/* src="https://kuula.co/share/collection/7cczq" */}
+                            <iframe
+                              src={data?.external_link}
+                              style={{
+                                borderRadius: 8,
+                                display: "block",
+                                objectFit: "cover",
+                                width: "100%",
+                                objectPosition: "50% 50%",
+                                height: "100%",
+                              }}
+                            />
+                          </a>
+                        </div>
+                      </div>{" "}
+                    </div>
+                  )}
 
-                  <div className="content-block-container" data-v-7bc368fc>
-                    {/**/}{" "}
+
+                  {/* <div className="content-block-container" data-v-7bc368fc>
                     <div
                       className="content-block"
                       data-v-0ffb479a
@@ -167,7 +168,6 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                   </div>
 
                   <div className="content-block-container">
-                    {/**/}{" "}
                     <div className="content-block">
                       <h1 style={{ textAlign: "start" }}>
                         <strong>About</strong>
@@ -181,8 +181,8 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                         of must-visit destinations.
                       </p>
                     </div>{" "}
-                  </div>
-
+                  </div> */}
+                  <div className="content-block-container" dangerouslySetInnerHTML={{ __html: data.description }}></div>
                   <div className="content-block-container full-width">
                     <div className="sc-b159753-0 kfgvQI">
                       <h2
@@ -193,7 +193,7 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                         Gallery
                       </h2>
                       <div className="sc-b159753-2 jhbUlU">
-                        {data?.image_set[0]?.images?.map(
+                        {data?.image_set?.flatMap((item: any) => item.images).map(
                           (item: any, index: number) => (
                             <picture
                               key={index}
@@ -212,241 +212,6 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                             </picture>
                           )
                         )}
-
-                        {/* <picture
-                          data-scroll="normal"
-                          data-column={1}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery2-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery2.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery3-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery3.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery4-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery4.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={1}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery5-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery5.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery6-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery6.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery7-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery7.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery8-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery8.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery9-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery9.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery10-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery10.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery11-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery11.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery12-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery12.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={2}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery13-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery13.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
-                          data-scroll="normal"
-                          data-column={1}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery14-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery14.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture> */}
                       </div>
                     </div>
                   </div>
