@@ -2,11 +2,11 @@ import React from "react";
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
+  data: any;
 }
-const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
   return (
     <>
-      {/* Modal */}
       <div id="signup-overlay" className="overlay" style={{ height: "100%" }}>
         <div className="lightbox">
           <a href="#" className="close" aria-label="close">
@@ -44,9 +44,7 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <div className="shot-content-container">
                 <div className="shot-header js-shot-header">
                   <div className="shot-header__container">
-                    <h1 className="shot-header__title">
-                      Hope you are staying cool 😎
-                    </h1>
+                    <h1 className="shot-header__title">{data?.name} 😎</h1>
                   </div>
                 </div>
                 <div className="sticky-header " data-sticky-header>
@@ -62,17 +60,12 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                           title="Aldo Crusher"
                         >
                           <picture>
-                            <source
-                              srcSet="https://cdn.dribbble.com/users/319371/avatars/normal/ce4194208467f0e61c9ee26b321fce69.png?1543866222"
-                              media="(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)"
-                            />
-                            <source srcSet="https://cdn.dribbble.com/users/319371/avatars/small/ce4194208467f0e61c9ee26b321fce69.png?1543866222" />
                             <img
                               className="photo"
-                              alt="Aldo Crusher"
+                              alt={data?.author?.name}
                               width={48}
                               height={48}
-                              src="https://cdn.dribbble.com/users/319371/avatars/small/ce4194208467f0e61c9ee26b321fce69.png?1543866222"
+                              src={data?.author?.avatar}
                             />
                           </picture>
                         </a>
@@ -81,7 +74,7 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                         <div className="sticky-header__name">
                           <span>
                             <a className="hoverable" rel="contact">
-                              Tuấn Mạnh
+                              {data?.author?.name}
                             </a>
                           </span>
                         </div>
@@ -94,7 +87,7 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                               data-context="follow-user"
                               original-title="Follow Aldo Crusher"
                             >
-                              tuanmanh97x@gmail.com
+                              {data?.author?.email}
                             </a>
                           </div>
                         </div>
@@ -116,26 +109,9 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                         }}
                       >
                         <a className="img-th" target="_blank">
-                          {/* <img
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                            }}
-                            data-test="v-img"
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery1.jpg/public"
-                            alt=""
-                            className="v-img content-block border-radius-8"
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery1.jpg/public"
-                          /> */}
-
+                          {/* src="https://kuula.co/share/collection/7cczq" */}
                           <iframe
                             src="https://kuula.co/share/collection/7cczq"
-                            // allowFullScreen
-                            // loop={true}
-                            // autoPlay={true}
-                            // muted={true}
-                            // playsInline={true}
-                            // className="fjRubF-video"
                             style={{
                               borderRadius: 8,
                               display: "block",
@@ -217,25 +193,27 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                         Gallery
                       </h2>
                       <div className="sc-b159753-2 jhbUlU">
-                        <picture
-                          data-scroll="normal"
-                          data-column={1}
-                          style={{
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
-                        >
-                          <source
-                            srcSet="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery1-sp.jpg/public"
-                            media="(max-width: 768px)"
-                          />
-                          <img
-                            src="https://imagedelivery.net/jZ4zarr81i7OIuT1JQY5_A/lp/next/tokyo/gallery1.jpg/public"
-                            alt=""
-                            loading="lazy"
-                          />
-                        </picture>
-                        <picture
+                        {data?.image_set[0]?.images?.map(
+                          (item: any, index: number) => (
+                            <picture
+                              key={index}
+                              data-scroll="normal"
+                              data-column={item.image_set_id}
+                              style={{
+                                opacity: 1,
+                                transform: "translate(0px, 0px)",
+                              }}
+                            >
+                              <source
+                                srcSet={item.path}
+                                media="(max-width: 768px)"
+                              />
+                              <img src={item.path} alt="" loading="lazy" />
+                            </picture>
+                          )
+                        )}
+
+                        {/* <picture
                           data-scroll="normal"
                           data-column={1}
                           style={{
@@ -468,7 +446,7 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                             alt=""
                             loading="lazy"
                           />
-                        </picture>
+                        </picture> */}
                       </div>
                     </div>
                   </div>
