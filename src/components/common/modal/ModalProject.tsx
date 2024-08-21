@@ -182,7 +182,7 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                       </p>
                     </div>{" "}
                   </div> */}
-                  <div className="content-block-container" dangerouslySetInnerHTML={{ __html: data.description }}></div>
+                  <div className="content-block-container" dangerouslySetInnerHTML={{ __html: data?.description }}></div>
                   <div className="content-block-container full-width">
                     <div className="sc-b159753-0 kfgvQI">
                       <h2
@@ -193,22 +193,22 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                         Gallery
                       </h2>
                       <div className="sc-b159753-2 jhbUlU">
-                        {data?.image_set?.flatMap((item: any) => item.images).map(
+                        {data?.image_set?.flatMap((item: any) => item?.images).map(
                           (item: any, index: number) => (
                             <picture
                               key={index}
                               data-scroll="normal"
-                              data-column={item.image_set_id}
+                              data-column={item?.image_set_id}
                               style={{
                                 opacity: 1,
                                 transform: "translate(0px, 0px)",
                               }}
                             >
                               <source
-                                srcSet={item.path}
+                                srcSet={item?.path}
                                 media="(max-width: 768px)"
                               />
-                              <img src={item.path} alt="" loading="lazy" />
+                              <img src={item?.path} alt="" loading="lazy" />
                             </picture>
                           )
                         )}
