@@ -1,10 +1,13 @@
 import React from "react";
+import he from 'he';
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   data: any;
 }
 const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
+  const description = typeof data?.description === 'string' ? data.description : '';
+  const decodedText = he.decode(description);
   return (
     <>
       <div id="signup-overlay" className="overlay" style={{ height: "100%" }}>
@@ -126,63 +129,10 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                       </div>{" "}
                     </div>
                   )}
-
-
-                  {/* <div className="content-block-container" data-v-7bc368fc>
-                    <div
-                      className="content-block"
-                      data-v-0ffb479a
-                      data-v-7bc368fc
-                    >
-                      <h2 style={{ textAlign: "start" }}>
-                        <strong>We are ready for new projects 🤠</strong>
-                      </h2>
-                      <p style={{ textAlign: "start" }}>
-                        ----------------------------------------------------------------
-                      </p>
-                      <p style={{ textAlign: "start" }}>
-                        Send inquiry to:<strong> 📨 </strong>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer nofollow"
-                          href="mailto:work@keitoto.com"
-                        >
-                          <strong>
-                            <u>work@keitoto.com</u>
-                          </strong>
-                        </a>
-                      </p>
-                      <p style={{ textAlign: "start" }}>
-                        or visit our website:<strong> 🌐 </strong>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer nofollow"
-                          href="http://www.keitoto.com"
-                        >
-                          <strong>
-                            <u>www.keitoto.com</u>
-                          </strong>
-                        </a>
-                      </p>
-                    </div>{" "}
-                  </div>
-
                   <div className="content-block-container">
-                    <div className="content-block">
-                      <h1 style={{ textAlign: "start" }}>
-                        <strong>About</strong>
-                      </h1>
-                      <p style={{ textAlign: "start" }}>
-                        Travel Companion Mobile App offers a seamless travel
-                        planning experience, allowing users to organize their
-                        entire trip in one convenient location. Share
-                        itineraries with family and friends, receive flight
-                        alerts, store essential documents, and create wish lists
-                        of must-visit destinations.
-                      </p>
-                    </div>{" "}
-                  </div> */}
-                  <div className="content-block-container" dangerouslySetInnerHTML={{ __html: data?.description }}></div>
+                  <div className="content-block" dangerouslySetInnerHTML={{ __html: decodedText  }}></div>
+                  </div>
+                 
                   <div className="content-block-container full-width">
                     <div className="sc-b159753-0 kfgvQI">
                       <h2

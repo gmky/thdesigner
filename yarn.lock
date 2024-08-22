@@ -986,6 +986,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/he@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "@types/he@npm:1.2.3"
+  checksum: e77851c73dd7b9902d92fe0118a26246a7f3676a3a1c6eb1408305187ef73b57c22550b1435946b983267f961d935554d5d0e1b458416932552f31e763e1aa41
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:^7.0.15":
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
@@ -2343,6 +2350,15 @@ __metadata:
   version: 4.0.0
   resolution: "has-flag@npm:4.0.0"
   checksum: 261a1357037ead75e338156b1f9452c016a37dcd3283a972a30d9e4a87441ba372c8b81f818cd0fbcd9c0354b4ae7e18b9e1afa1971164aef6d18c2b6095a8ad
+  languageName: node
+  linkType: hard
+
+"he@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "he@npm:1.2.0"
+  bin:
+    he: bin/he
+  checksum: 3d4d6babccccd79c5c5a3f929a68af33360d6445587d628087f39a965079d84f18ce9c3d3f917ee1e3978916fc833bb8b29377c3b403f919426f91bc6965e7a7
   languageName: node
   linkType: hard
 
@@ -3949,6 +3965,7 @@ __metadata:
     "@fortawesome/react-fontawesome": ^0.2.2
     "@react-three/drei": ^9.108.4
     "@react-three/fiber": ^8.16.8
+    "@types/he": ^1.2.3
     "@types/react": ^18.3.3
     "@types/react-dom": ^18.3.0
     "@types/react-slick": ^0.23.13
@@ -3959,6 +3976,7 @@ __metadata:
     eslint: ^8.57.0
     eslint-plugin-react-hooks: ^4.6.2
     eslint-plugin-react-refresh: ^0.4.7
+    he: ^1.2.0
     install: ^0.13.0
     lazysizes: ^5.3.2
     openapi-typescript-codegen: ^0.29.0
