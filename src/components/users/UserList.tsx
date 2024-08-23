@@ -1,9 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { ApiClient } from "../../api/ApiClient";
 
 function UserList() {
   const [items, setItems] = useState([]); // State để lưu trữ danh sách các phần tử
-
+  // const getUsers = () => {
+  //   new ApiClient().user.getUsers().then((res) => {
+  //     // setItems(res?.data);
+  //     console.log(res);
+  //   });
+  // };
   const getDataUsers = () => {
     axios.get("files/users.json").then((res) => {
       setItems(res.data);
@@ -12,6 +18,7 @@ function UserList() {
 
   useEffect(() => {
     getDataUsers();
+    // getUsers();
   }, []);
   return (
     <>
@@ -59,7 +66,9 @@ function UserList() {
                       </div>
                       <ul className="hero-marquee-item__tags">
                         {item.tags.map((tag: string) => (
-                          <li key={tag} className="hero-marquee-item__tag">{tag}</li>
+                          <li key={tag} className="hero-marquee-item__tag">
+                            {tag}
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -72,9 +81,9 @@ function UserList() {
                         className="lazypreload lazyautosizes lazyloaded"
                         data-sizes="auto"
                         data-aspectratio="0.8029411764705883"
-                        data-srcset={item.avatar} 
+                        data-srcset={item.avatar}
                         sizes="273px"
-                        srcSet={item.avatar} 
+                        srcSet={item.avatar}
                       />
                     </div>
                   </div>

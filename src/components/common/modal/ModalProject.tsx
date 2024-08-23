@@ -1,13 +1,21 @@
 import React from "react";
-import he from 'he';
+import he from "he";
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   data: any;
 }
 const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
-  const description = typeof data?.description === 'string' ? data.description : '';
+  const description =
+    typeof data?.description === "string" ? data.description : "";
   const decodedText = he.decode(description);
+
+  const mergedImages = data?.image_set?.flatMap((item: any) => {
+    return item.images.map((image: any) => ({
+      ...image,
+      length: item.images.length,
+    }));
+  });
   return (
     <>
       <div id="signup-overlay" className="overlay" style={{ height: "100%" }}>
@@ -37,8 +45,9 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
         </div>
       </div>
       <div
-        className={`shot-overlay js-shot-overlay lazyloading-hidden-container lazyloaded ${isOpen === true ? "overlay-visible" : "overlay-hide"
-          }`}
+        className={`shot-overlay js-shot-overlay lazyloading-hidden-container lazyloaded ${
+          isOpen === true ? "overlay-visible" : "overlay-hide"
+        }`}
       >
         <div className="overlay-content js-overlay-content">
           <div className="shot-container js-shot-container lazyload-hidden-element">
@@ -130,9 +139,12 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                     </div>
                   )}
                   <div className="content-block-container">
-                  <div className="content-block" dangerouslySetInnerHTML={{ __html: decodedText  }}></div>
+                    <div
+                      className="content-block"
+                      dangerouslySetInnerHTML={{ __html: decodedText }}
+                    ></div>
                   </div>
-                 
+
                   <div className="content-block-container full-width">
                     <div className="sc-b159753-0 kfgvQI">
                       <h2
@@ -143,25 +155,23 @@ const ModalProject: React.FC<ModalProps> = ({ isOpen, onClose, data }) => {
                         Gallery
                       </h2>
                       <div className="sc-b159753-2 jhbUlU">
-                        {data?.image_set?.flatMap((item: any) => item?.images).map(
-                          (item: any, index: number) => (
-                            <picture
-                              key={index}
-                              data-scroll="normal"
-                              data-column={item?.image_set_id}
-                              style={{
-                                opacity: 1,
-                                transform: "translate(0px, 0px)",
-                              }}
-                            >
-                              <source
-                                srcSet={item?.path}
-                                media="(max-width: 768px)"
-                              />
-                              <img src={item?.path} alt="" loading="lazy" />
-                            </picture>
-                          )
-                        )}
+                        {mergedImages?.map((item: any, index: number) => (
+                          <picture
+                            key={index}
+                            data-scroll="normal"
+                            data-column={item?.length}
+                            style={{
+                              opacity: 1,
+                              transform: "translate(0px, 0px)",
+                            }}
+                          >
+                            <source
+                              srcSet={item?.path}
+                              media="(max-width: 768px)"
+                            />
+                            <img src={item?.path} alt="" loading="lazy" />
+                          </picture>
+                        ))}
                       </div>
                     </div>
                   </div>
