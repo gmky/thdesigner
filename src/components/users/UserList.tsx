@@ -1,24 +1,16 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-// import { ApiClient } from "../../api/ApiClient";
+import { ApiClient } from "../../api/ApiClient";
 
 function UserList() {
-  const [items, setItems] = useState([]); // State để lưu trữ danh sách các phần tử
-  // const getUsers = () => {
-  //   new ApiClient().user.getUsers().then((res) => {
-  //     // setItems(res?.data);
-  //     console.log(res);
-  //   });
-  // };
-  const getDataUsers = () => {
-    axios.get("files/users.json").then((res) => {
-      setItems(res.data);
+  const [items, setItems] = useState<any>([]);
+  const getUsers = () => {
+    new ApiClient().author.getAuthors().then((res) => {
+      setItems(res?.data);
     });
   };
 
   useEffect(() => {
-    getDataUsers();
-    // getUsers();
+    getUsers();
   }, []);
   return (
     <>
@@ -52,7 +44,7 @@ function UserList() {
           >
             <div className="hero-marquee__track">
               <div className="hero-marquee__grid">
-                {items.map((item: any, index: any) => (
+                {items?.map((item: any, index: any) => (
                   <div
                     key={index}
                     className="hero-marquee-item lazyloaded"
@@ -60,12 +52,12 @@ function UserList() {
                     // id={`hero-marquee-item-${index}`}
                   >
                     <div className="hero-marquee-item__info">
-                      <div className="hero-marquee-item__name">{item.name}</div>
+                      <div className="hero-marquee-item__name">{item?.name}</div>
                       <div className="hero-marquee-item__title">
-                        {item.title}
+                        {item?.job_title}
                       </div>
                       <ul className="hero-marquee-item__tags">
-                        {item.tags.map((tag: string) => (
+                        {item?.tags?.map((tag: string) => (
                           <li key={tag} className="hero-marquee-item__tag">
                             {tag}
                           </li>
