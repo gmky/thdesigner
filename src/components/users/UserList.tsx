@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { ApiClient } from "../../api/ApiClient";
+// import { ApiClient } from "../../api/ApiClient";
 
 function UserList() {
   const [items, setItems] = useState([]); // State để lưu trữ danh sách các phần tử
