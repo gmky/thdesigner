@@ -5,24 +5,33 @@ import { ApiClient } from "../../api";
 function ProjectList() {
   const [open, setOpen] = useState(false);
   const [dataProducts, setDataProducts] = useState<any>([]);
-  const [visibleItems, setVisibleItems] = useState(8);
   const [dataProductById, setDataProductById] = useState<any>(null);
-  const getProducts = () => {
-    new ApiClient().product.getProducts().then((res) => {
-      setDataProducts(res?.data);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const getProducts = (page: number) => {
+    new ApiClient().product.getProducts(page).then((res: any) => {
+      if (res?.data?.length) {
+        setDataProducts((prev: any) => {
+          const existingIds = new Set(prev.map((product: any) => product.id));
+          const newProducts = res.data.filter((product: any) => !existingIds.has(product.id));
+          return [...prev, ...newProducts];
+        });
+      }
+      if (!res?.next_page_url) {
+        setHasMore(false);
+      }
     });
   };
 
   const getProductById = (id: number) => {
     new ApiClient().product.getProducts1(id).then((res) => {
       setDataProductById(res);
-      console.log(res);
     });
   };
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    getProducts(page);
+  }, [page]);
 
   useEffect(() => {
     if (open) {
@@ -45,14 +54,9 @@ function ProjectList() {
   };
 
   const handleShowMore = () => {
-    setVisibleItems((prev) => {
-      const remainingItems = dataProducts.length - prev;
-      if (remainingItems <= 4) {
-        return prev + remainingItems;
-      } else {
-        return prev + 4;
-      }
-    });
+    if (hasMore) {
+      setPage((prev) => prev + 1);
+    }
   };
 
   return (
@@ -62,8 +66,7 @@ function ProjectList() {
           Khám phá những thiết kế đầy cảm hứng
         </h2>
         <ol className="js-thumbnail-grid shots-grid group dribbbles  container-fluid">
-          {dataProducts
-            .slice(0, visibleItems)
+          {(dataProducts || [])
             ?.map((item: any, index: number) => (
               <li
                 key={index}
