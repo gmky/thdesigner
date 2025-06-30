@@ -49,7 +49,6 @@ function UserList() {
                     key={index}
                     className="hero-marquee-item lazyloaded"
                     data-lazy-parent
-                    // id={`hero-marquee-item-${index}`}
                   >
                     <div className="hero-marquee-item__info">
                       <div className="hero-marquee-item__name">{item?.name}</div>
